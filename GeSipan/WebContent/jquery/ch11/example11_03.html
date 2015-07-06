@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>엘리먼트를 선택 할 수 있게 하기</title>
+<style type="text/css">
+#selectable .ui-selecting {
+	background: silver;
+}
+#selectable .ui-selected {
+	background: gray;
+}
+</style>
+<script src="../js/jquery.js" type="text/javascript"></script>
+<script src="../js/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {   
+   	$("#selectable").selectable();
+});
+</script>
+</head> 
+<body>
+Interactions
+<ul id="selectable">
+	<li>Draggable</li>
+	<li>Droppable</li>
+	<li>Resizable</li>
+	<li>Selectable</li>
+	<li>Sortable</li>
+</ul>
+</body> 
+</HTML>  

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>데이터 관리하기</title>
+<script src="../js/jquery-1.6.3.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function() {
+	  var adiv = $("div").get(0);	   
+	  
+	  $("#btnshow").click(function() {// 데이터 보기		
+	  	alert($.data(adiv, "content"));
+	  });	   
+	  
+	  $("#btnsave").click(function() {	//데이터 저장	
+		$.data(adiv,"content","안녕");
+	  });
+	  	  
+	  $("#btnremove").click(function() {//데이터 제거
+		  $.removeData(adiv, "content");
+	  });
+  });
+</script>
+</head>
+<body>
+ <div> 데이터 관리하기 </div>
+ <button id="btnshow"> show data </button>
+ <button id="btnsave"> save data </button>
+ <button id="btnremove">remove data </button>
+</body>
+</html>

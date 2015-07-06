@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>모든 엘리먼트에 스타일을 적용하고 인접한 형제를 노드로 추가하기-“*”, “prev + next”</title>
+<style type="text/css">
+.textstyle {
+   font-size:14pt; line-height: 20pt; margin:10px;   
+}
+</style>
+<script src="../js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      $('*').addClass('textstyle');
+      $('em + a').css('background-color', 'yellow').each(function(){
+          $(this).appendTo('.result1');
+         });
+      console.log("검색된 엘리먼트 개수 : " + $('em + a').length);
+   });
+</script>
+</head>
+<body>
+   <em> one  </em>      
+   <a> two  </a>
+   <a> three  </a>
+   <b> four </b>
+   <a> five </a>
+   <em> six </em>
+   <hr>
+   <div>
+      <span> prev + next로 검색된 엘리먼트 : </span>
+      <span class="result1"></span>
+   </div>      
+</body>
+</html>

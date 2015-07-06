@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트로 Ajax 구현하기</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var xhr;
+
+		if (window.XMLHttpRequest) {
+			xhr = new XMLHttpRequest();
+		} else if (window.ActiveXObject) {
+			xhr = new ActiveXObject("Msxml2.XMLHTTP");
+		} else {
+			throw new Error("Ajax를 지원하지 않는 브라우저입니다.");
+		}
+
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState == 4) {
+				if (xhr.status >= 200 && xhr.status < 300) {
+					
+					document.getElementById('container').innerHTML = xhr.responseText;
+				}
+			}
+		}
+
+		xhr.open('GET', 'resource.html');
+		xhr.send('');
+	}
+</script>
+</head>
+<body>
+	<div id="container"></div>
+</body>
+</html>

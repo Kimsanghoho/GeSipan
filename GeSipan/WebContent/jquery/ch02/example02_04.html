@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선택된 jQuery 확장 객체 집합에서 자손 엘리먼트에 스타일시트 적용하기-“ancestor descendant”</title>
+<style type="text/css">
+   em { font-size: 12pt; line-height: 40pt}
+</style>
+<script src="../js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+	   
+	   $('div em').css('border',  '3pt solid #f00')
+                  .css('padding', '7pt 7pt 7pt 7pt');
+      
+      $('span em').css('border',  '1pt dotted #0f0')
+                    .css('padding', '7pt 7pt 7pt 7pt');
+      
+      console.log("검색된 엘리먼트 개수 : "+ $('div em').length);
+      console.log("검색된 엘리먼트 개수 : "+ $('span em').length);
+   });
+</script>
+</head>
+<body>
+<div>
+   <em>Hello!</em>
+   <em>jQuery</em>
+   <em>forever</em>
+</div>
+<span>
+   <em>Good Bye!</em>
+   <em>javascript</em>
+</span> 
+</body>
+</html>

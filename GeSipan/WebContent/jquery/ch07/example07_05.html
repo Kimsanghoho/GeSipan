@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>해당 엘리먼트를 서서히 보이게 하기</title>
+<style>
+span { color: red; cursor: pointer; }
+div {
+  margin: 3px;  width: 80px;
+  display: none;  height: 80px;
+  float: left;
+}
+div#red {  background: #f00;}
+div#green {  background: #0f0;}
+div#blue {  background: #00f;}
+</style>
+<script src="../js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function() {
+       $(document.body).click(function () { 
+           $("div:hidden:first").fadeIn("slow"); 
+         });
+  });
+</script>
+</head>
+<body>
+  <span> 클릭 </span> <p>
+  <div id="red"></div> 
+  <div id="green"></div> 
+  <div id="blue"></div> 
+</body>
+</html>

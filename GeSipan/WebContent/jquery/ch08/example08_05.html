@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열에서 특정 조건의 요소만 선택하여 반환하기</title>
+<style> 
+  * { font-size:14pt; font-weight: bold} 
+  div { color:blue; } 
+  p { color:green; margin:0; } 
+  span { color:red; } 
+</style> 
+<script src="../js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function() {
+    var arr = [ 1, 9, 3, 8, 6, 1, 5, 9, 4, 7, 3, 8, 6, 9, 1 ]; 
+    $("div").text(arr.join(", ")); 
+     
+    arr = $.grep(arr, function(element, index){ 
+      return (element != 5 && index > 4); 
+    }); 
+    $("p").text(arr.join(", ")); 
+     
+    arr = $.grep(arr, function (element) { 
+    	return element != 9; 
+    }); 
+    $("span").text(arr.join(", "));
+    
+  });
+</script>
+</head>
+<body>
+  <div></div> 
+  <p></p> 
+  <span></span>
+</body>
+</html>

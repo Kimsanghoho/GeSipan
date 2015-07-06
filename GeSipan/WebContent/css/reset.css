@@ -1,0 +1,107 @@
+@CHARSET "UTF-8";
+@charset "utf-8";
+/* Reset */
+html, body {
+    width: 100%;    /* 100%는 화면 꽉 채우는것. 웹표준 정책에 따름 */
+    height: 100%     /* 효과는 모니터는 스마트 폰이든 상관없이 출력 */
+}
+ 
+html {
+    overflow-y: scroll;     /* 스크롤을 내리면 스크롤바 생성 */
+    font-size: 10px         
+}
+ 
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, form, fieldset, p,
+    button {
+    margin: 0;         /* 프레임 사이를 띄우는게 margin 내 살을 파서 깎아 내는게 padding */
+    padding: 0;     /*  margin 10,20,30,40 << 위에서부터 시계방향으로 앞에 두개만 주면 위아래, 양옆 */
+    /* 디폴트는 프레임끼리 붙어있는 상태 */
+}
+ 
+body, h1, h2, h3, h4, input, button {
+    font-family: Dotum, '돋움', Helvetica, AppleSDGothicNeo, sans-serif;
+   font-size: 12px; 
+    color: #383d41
+}
+ 
+body {
+    background-color: #fff;
+    text-align: center;     /* 글자들 정렬 기본은 센터 정렬 */
+    *word-break: break-all;
+    -ms-word-break: break-all
+}
+ 
+img, fieldset, iframe {
+    border: 0 none      /* 디폴트는 간격 없이 표시 */    
+}
+ 
+li {
+    list-style: none
+}
+ 
+input, select, button {
+    vertical-align: middle         /* 세로 정렬시 가운데 위치 */
+}
+ 
+img {
+    vertical-align: top     /* 이미지는 맨위부터 채우기 */
+}
+ 
+i, em, address {
+    font-style: normal         /* em 은 emphasis 의 약자 뜻은 강조, 폰트의 굵기 */
+}
+ 
+label, button {
+    cursor: pointer      /* 손가락 모양이 나타나게 함 */
+}
+ 
+button {
+    margin: 0;
+    padding: 0
+}
+ 
+a {
+    color: #222;
+    text-decoration: none /* 하이퍼텍스트 문자인데 밑줄을 그리지 마라(none) */
+}
+ 
+a:hover {
+    color: #390;
+    text-decoration: underline         /* 호버 이벤트에는 밑줄이 생겼다 없어졌다 하게 하라 */
+}
+ 
+button * {
+    position: relative      /* 상대적 위치에 두어라 */
+}
+ 
+button img {
+    left: -3px;
+    *left: auto
+}
+ 
+html:first-child select {
+    height: 20px;
+    padding-right: 6px
+}
+ 
+option {
+    padding-right: 6px
+}
+ 
+hr {
+    /* display: none */      /* 수평선 */
+}
+ 
+legend {
+    *width: 0
+}
+ 
+table {
+    border-collapse: collapse;      /* 테이블 사이에 간격을 주지 마라 */
+    border-spacing: 0;
+}
+ 
+input::-ms-clear {
+    display: none
+}
+ 

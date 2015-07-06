@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>하나의 DOM 엘리멘트에 여러 개의 이벤트 적용하기</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('img').bind({
+			mouseout : function(){
+				$("img").attr("src", "../images/but1.gif"); 
+			},
+			mouseover : function(){
+				$("img").attr("src", "../images/but2.gif"); 
+			},
+			click : function(){
+				alert("클릭"); 
+			}
+		});			
+	});
+</script>
+</head>
+<body>   
+   <img src="../images/but1.gif">
+</body>
+</html>

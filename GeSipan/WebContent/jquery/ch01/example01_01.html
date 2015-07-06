@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>페이지가 렌더링된 후 CSS 변경하기</title>
+<style type="text/css">
+	span { font-size: 30pt   }
+	.redtext   { color : #f00   }
+	.italictext { font-style: italic;   }
+</style>
+<script src="../js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$('span').addClass('italictext');
+</script>	
+</head>
+<body>
+<span> simple </span>
+<script type="text/javascript">
+	$('span').addClass('redtext');
+</script>
+</body>
+</html>

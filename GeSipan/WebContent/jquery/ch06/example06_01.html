@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+ul { float:left; margin:30px}
+</style>
+<meta charset="UTF-8">
+<title>DOM 엘리멘트에 이벤트 적용하기</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('a').bind('click' ,function(){			
+			$("img").attr("src",  $(this).attr("href")); 
+			return false;
+		});
+	});
+</script>
+</head>
+<body>   
+   <ul>
+   <li> <a href="../images/image3.jpg"> 똘이 사진 </a> </li>
+   <li> <a href="../images/image4.jpg"> 을이 사진 </a> </li>
+   </ul>
+   <img>
+</body>
+</html>

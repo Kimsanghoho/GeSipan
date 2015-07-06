@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+  href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head>
+<body>
+<!-- 첫 번째 페이지 시작 부분 -->
+   <section id="page1" data-role="page"> 
+      <header data-role="header">
+         <h1>jQuery Mobile</h1>
+      </header>
+      <div class="content" data-role="content">
+         <p>첫 번째  페이지 !</p>
+         <a href="#page2">두 번째 페이지로 전환하기 </a>
+      </div>
+      <footer data-role="footer">
+         <h1> copyright 2012 syj</h1>
+      </footer>
+   </section>   
+<!-- 첫 번째 페이지 끝 부분-->
+  
+<!-- 두 번째 페이지 시작 부분 -->  
+   <section id="page2" data-role="page"> 
+      <header data-role="header">
+         <h1>jQuery Mobile</h1>
+      </header>
+      <div class="content" data-role="content">
+         <p>두 번째 페이지 !</p> 
+      <p><a href="#page1"> 첫 번째  페이지로  전환하기 </a></p>
+      <p><a href="#page1" 
+               data-direction="reverse">  첫 번째  페이지로 돌아가기 </a></p>
+      <p><a href="#page3">세 번째 페이지로 전환하기 </a></p>
+      </div>
+    <footer data-role="footer">
+      <h1> copyright 2012 syj</h1>
+    </footer>
+  </section>
+<!-- 두 번째 페이지 끝 부분-->
+  
+<!-- 세 번째 페이지 시작 부분 -->  
+  <section id="page3" data-role="page">
+    <header data-role="header">
+      <h1>jQuery Mobile</h1>
+    </header>
+    <div data-role="content">
+      <p>세 번째 페이지 !</p>
+    <a href="#page2"
+        data-rel="back"> 첫 번째  페이지로 돌아가기</a>
+    </div>
+    <footer data-role="footer">
+      <h1> copyright 2012 syj</h1>
+    </footer>
+  </section>
+<!-- 세 번째 페이지 끝 부분-->  
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+  href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head>
+<body>
+<!-- 첫 번째  페이지 시작 부분 -->
+  <section id="page1" data-role="page">
+    <div data-role="header"  data-position="fixed">
+      <a href="#" data-icon="arrow-l" data-theme="b"> Back </a>
+      <h1> Page Header </h1>
+      <a href="#" data-icon="home" data-theme="b"> Home </a>
+    </div>  
+    <div data-role="content">
+      <a href="#page2"> Go to the second page!</a>           
+    </div>
+    <footer data-role="footer" data-position="fixed">
+      <h1> copyright 2012 syj</h1>
+    </footer>
+  </section>
+<!-- 첫 번째 페이지 끝 부분-->
+  
+<!-- 두 번째 페이지 시작 부분 -->   
+  <section id="page2" data-role="page">
+    <div data-role="header"  data-position="fixed">
+      <h1> Page Header </h1>
+      <a href="#" data-icon="gear" class="ui-btn-right"> Options </a>
+    </div>  
+    <div data-role="content">
+      <a href="#page1"> Go to the first page!</a>
+    </div>
+    <footer data-role="footer"  data-position="fixed">
+      <div data-role="navbar"  data-theme="e">
+        <ul>
+          <li> <a href="#" data-icon="grid" data-iconpos="top" 
+            data-theme="b"> Summary </a></li>
+          <li> <a href="#" data-icon="star" data-iconpos="top" 
+            data-theme="b" class="ui-btn-active"> Favs </a></li>
+          <li> <a href="#" data-icon="gear" data-iconpos="top" 
+            data-theme="b"> Setup </a></li>              
+        </ul>
+      </div>
+    </footer>
+  </section> 
+<!-- 두 번째 페이지 끝부분-->   
+</body>
+</html>

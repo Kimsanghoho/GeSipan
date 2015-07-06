@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+  p,div,button { margin: 8px; font-size:20px;  }  
+  .red { color:red; } 
+</style>
+<script src="../js/jquery-1.6.3.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+	$("button").click(function() {
+		$("div#result1").append($("p:first").hasClass("red").toString()); 
+		$("div#result2").append($("p:last").hasClass("red").toString()); 
+		$("div#result3").append($("p").hasClass("red").toString()); 
+	});
+});
+
+</script>
+</head>
+<body>
+  <p> 찾고자 하는 색상을 빨간색으로 변경하는 클래스가 없는 문장</p> 
+  <p class="red">찾고자 하는 색상을 빨간색으로 변경하는 클래스가 있는 문장</p> 
+   
+  <button>hasClass</button>
+	
+  <div id="result1">첫 문장은 빨간색으로 변경하는 클래스가 있는가?: </div> 
+  <div id="result2">마지막 문장은 빨간색으로 변경하는 클래스가 있는가?: </div> 
+  <div id="result3">빨간색으로 변경하는 클래스가 있는 문장이 하나라도 있는가: </div> 
+</body>
+</html>

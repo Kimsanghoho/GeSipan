@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>해당 엘리먼트를 사라지게 하기</title>
+<style>
+span{ display:none}
+</style>
+<script src="../js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function() {
+      $("button:eq(0)").click(function () { 
+	        $("span:first").show(); 
+	  });
+	  $("button:eq(2)").click(function () { 
+	        $("span:last").show("slow", function() {
+				$(this).css('background', 'yellow');
+			}); 
+	  });
+	  $("button:eq(1)").click(function () { 
+		  $("span:first").hide() 
+	  });
+	  $("button:eq(3)").click(function () { 
+	        $("span:last").hide("slow", function() {
+				$(this).css('background', '');
+			}); 
+	  });	  
+  });
+</script>
+</head>
+<body>  
+  <button>Show It</button> <button>Hide It</button> 
+  <span>안녕하세요.</span> <br>
+  <button>Show It slow</button> <button>Hide It slow</button>  
+  <span>반갑습니다.</span>
+</body>
+</html>

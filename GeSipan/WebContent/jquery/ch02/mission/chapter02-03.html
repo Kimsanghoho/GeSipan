@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>              
+<script type="text/javascript" src="../../js/jquery-1.6.3.js"></script>
+<script type="text/javascript">
+	var elSelected = null;
+
+	function searchId(){
+		var id = $('#idvalue').val();		
+		$('#' + id + '>span').css('backgroundColor', 'grey');
+	}
+
+	$(function(){
+		$('#idsearch').bind('click', searchId);
+		
+		$('.depth_1').css('paddingLeft', '15px');
+		$('.depth_2').css('paddingLeft', '30px');
+		$('.depth_3').css('paddingLeft', '45px');		
+	});
+</script>
+</head>
+<body>
+	<input type="text" id="idvalue">
+	<input type="button" id="idsearch" value="id검색">	
+	<div id="folders" class="depth_0">
+		<span>folders</span>
+		<div id="picture" class="depth_1">
+			<span>picture</span>
+			<div id="dogs" class="depth_2">
+				<span>dogs</span>
+				<div id="smiledog" class="depth_3"><span>smiledog</span></div>
+				<div id="happydog" class="depth_3"><span>happydog</span></div>				
+				<div id="babydog" class="depth_3"><span>babydog</span></div>
+			</div>
+			<div id="cats" class="depth_2">
+				<span>cats</span>
+				<div id="cutecat" class="depth_3"><span>cutecat</span></div>
+				<div id="fatcat" class="depth_3"><span>fatcat</span></div>
+			</div>
+			<div id="trees" class="depth_2">
+				<span>trees</span>
+				<div id="bigtree" class="depth_3"><span>bigtree</span></div>
+			</div>
+		</div>
+		<div class="depth_1">
+			<span>music</span>
+			<div id="ballard" class="depth_2">
+				<span>ballard</span>
+				<div id="kimgunno" class="depth_3">
+					<span>kimgunno</span>
+				</div>
+			</div>
+		</div>
+		<div class="depth_1"><span>document</span>
+			<div id="excel" class="depth_2"><span>excel</span></div>
+			<div id="ppt" class="depth_2"><span>ppt</span></div>
+			<div id="word" class="depth_2"><span>word</span></div>			
+		</div>
+	</div>
+</body>
+</html>

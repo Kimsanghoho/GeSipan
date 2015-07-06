@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  	<title>엘리먼트 이동하기</title>
+<style type="text/css">
+#selectable .ui-selecting {
+	background: silver;
+}
+#selectable .ui-selected {
+	background: gray;
+}
+</style>
+<script src="../js/jquery.js" type="text/javascript"></script>
+<script src="../js/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {   
+	$("ul").sortable();	
+	$("tr").sortable();
+});
+</script>
+</head> 
+<body>
+Interactions
+<ul>  <!-- y 좌표만 움직임 드래그하여 위치 이동 -->
+	<li>Draggable</li>
+	<li>Droppable</li>
+	<li>Resizable</li>
+	<li>Selectable</li>
+	<li>Sortable</li>
+	
+</ul>
+<table border=1>
+<tr>
+		<td>Accordion</td>
+		<td>Autocomplete</td>
+		<td>Datepicker</td>
+		<td>Dialog</td>
+		<td>Progressbar</td>
+		<td>Slider</td>
+</tr>
+</table>
+</body> 
+</HTML>  

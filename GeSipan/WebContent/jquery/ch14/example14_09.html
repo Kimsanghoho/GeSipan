@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+  href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head>
+<body>
+  <section id="page1" data-role="page">
+    <header data-role="header" data-position="fixed">
+      <h1>jQuery Mobile</h1>
+    </header>
+    <div data-role="content">    
+      <div data-role="collapsible">    
+        <h3>접이식 예제 1</h3>
+        <p>이 부분이 접었다 펼 수 있는 영역입니다. </p>
+      </div>
+        
+      <div data-role="collapsible" data-collapsed="true">    
+        <h3>Section 1 : 텍스트로 구성된 접이식 블록</h3>
+        <p>로드하자마자 접혀진 상태로 보이도록 하려고 
+        <code> data-collapsed="true" </code> 속성을 추가 함</p>
+        <p>이 부분이 접었다 펼 수 있는 영역입니다. </p>
+      </div>
+  
+      <div data-role="collapsible" data-collapsed="false">    
+        <h3>Section 2 : 텍스트로 구성된 접이식 블록</h3>
+        <p>로드하자마자 펼쳐진 상태로 보이도록 하려고 
+        <code>data-collapsed="false" </code> 속성을 추가 함</p>
+        <p>이 부분이 접었다 펼 수 있는 영역입니다. </p>
+      </div>
+    </div>
+    <footer data-role="footer" data-position="fixed">
+      <h1> copyright 2012 syj</h1>
+    </footer>
+  </section>
+</body>
+</html>
